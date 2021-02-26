@@ -41,9 +41,9 @@
         <div class="form-group">
             <label asp-for="Profession"></label>
             <select asp-for="Profession" class="form-control" asp-items="Html.GetEnumSelectList<Profession>()">
-                <option value="Profession" selected="">Choose a Profession</option>
+                <option value="Profession" selected="Profession">Choose a Profession</option>
             </select>
-            <input asp-for="Profession" class="form-control" />
+            @*<input asp-for="Profession" class="form-control" />*@
             <span asp-validation-for="Profession" class=" text-danger"></span>
         </div>
 
