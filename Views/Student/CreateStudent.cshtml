@@ -1,6 +1,5 @@
-﻿
+﻿@model StudentVm
 
-@model StudentVm
 
 <div>
     <h2> Creating new Student</h2>
@@ -9,6 +8,9 @@
 <div>
 
     <form method="post" asp-controller="Student" asp-action="CreateStudent" enctype="multipart/form-data">
+        
+        @*@await Html.PartialAsync("CreateUpdateStudent");*@
+        
         <div class="form-group">
             <label asp-for="Name"></label>
             <input asp-for="Name" class="form-control" />
@@ -23,10 +25,10 @@
 
         <div class="form-group">
             <label asp-for="UploadImage"></label><br/>
-<input asp-for="UploadImage" accept='*'/>
-            @*this is for selection between some images u have already on the program(default images)*@
+            <input asp-for="UploadImage" accept='*'/>
+            @*this is for selection between some images u have already on the program(default images)
             
-            @*<select asp-for="Image" class="form-control">
+            <select asp-for="Image" class="form-control">
             <option  value="alex.jpg">Alex</option>
             <option value="john.jpg">John</option>
             <option value="malina.jpg">Malina</option>
@@ -39,9 +41,9 @@
         <div class="form-group">
             <label asp-for="Profession"></label>
             <select asp-for="Profession" class="form-control" asp-items="Html.GetEnumSelectList<Profession>()">
-                <option value="Profession" selected="Profession">Choose a Profession</option>
+                <option value="Profession" selected="">Choose a Profession</option>
             </select>
-            @*<input asp-for="Profession" class="form-control" />*@
+            <input asp-for="Profession" class="form-control" />
             <span asp-validation-for="Profession" class=" text-danger"></span>
         </div>
 

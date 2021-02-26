@@ -31,10 +31,13 @@ namespace CrudOperation.Models
         [Required(ErrorMessage = "Image is required")]
         public string Image { get; set; }
 
-
+        
         [Required(ErrorMessage = "Profession is required")]
         public Profession Profession { get; set; }
 
 
+        [Required(ErrorMessage = "Image is required")]
+        [Display(Name = "Choose Image")]
+        public IFormFile UploadImage { get; set; }
     }
 }

@@ -60,7 +60,7 @@ namespace CrudOperation.Services
                // Students[student.Id].Id = student.Id;
                 Students[student.Id].Name = student.Name;
                 Students[student.Id].Email = student.Email;
-                Students[student.Id].Image = student.Image;
+                //Students[student.Id].Image = student.Image;
                 Students[student.Id].Profession = student.Profession;
             }
         }
